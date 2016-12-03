@@ -8,5 +8,3 @@ How it works:
 #4. The program expect a string message which we want to encrypt.
 #5. We need to click on send button to send the message.
 #6.Alice will type a message and send it to Bob,The message will be encrypted with this algorithm with no of bits provided in step 1.
-
-Below is the image of GUI
