@@ -2,17 +2,17 @@ package com.beta.friends.cmp;
 
 import java.math.BigInteger;
 import java.util.Random;
-
+/**
+ * 
+ * @author Ramveer
+ *This is the implementation part of RSA algorithm
+ */
 public class Rsa {
     BigInteger p,q,n,phi,e,d;
     int bitLength;
-	
     Rsa(int bitLength){
     	this.bitLength=bitLength;
-
-    	/*
-    	 * generate two random no's p and q 
-    	 * 
+    	 /* generate two random no's p and q  
     	 */
     	Random rnd=new Random();
     	/*
@@ -24,7 +24,6 @@ public class Rsa {
     	q=BigInteger.probablePrime(bitLength, rnd);
     	temp=BigInteger.probablePrime(bitLength-6, rnd);
     	System.out.println("P and Q are: "+p+" ->"+q);
-
     	/*
     	 * calculate n
     	 */
@@ -38,15 +37,9 @@ public class Rsa {
     	}
     	if((n.gcd(temp)).equals(BigInteger.ONE)){
     		e=temp;
-
     	}
     	System.out.println("e is ->"+e);
-
-
     	d=e.modInverse(phi);
     	System.out.println(" decr key is :"+d);
-
     }
-
-
 }
